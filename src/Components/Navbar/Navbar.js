@@ -4,8 +4,8 @@ import React from "react";
 function App() {
   return (
     <>
-      <div className="appHeader">
-        <h2>Crypto Price Checker</h2>
+      <div className="p-5 text-center">
+        <h1 className="mb-3">Crypto Price Checker</h1>
       </div>
     </>
   );

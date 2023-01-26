@@ -15,7 +15,12 @@ const Coin = ({
     <>
       <tr className="coinRow">
         <td data-label="Coin">
-          <img src={image} alt="coin" class="coinImage"></img>
+          <img
+            src={image}
+            alt="coin"
+            class="coinImage"
+            className="img-fluid"
+          ></img>
         </td>
         <td data-label="Name">{name}</td>
         <td data-label="Symbol">{symbol.toUpperCase()}</td>

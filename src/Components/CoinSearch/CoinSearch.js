@@ -13,7 +13,7 @@ function CoinSearch() {
 
   return (
     <>
-      <div className="coinSearchContainer">
+      <div className="p-5 text-center">
         <div className="coinSearch">
           <h1 className="coinText">Search for a specific Coin</h1>
           <form>
