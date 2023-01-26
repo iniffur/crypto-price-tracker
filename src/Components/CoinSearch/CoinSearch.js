@@ -34,3 +34,4 @@ function CoinSearch() {
 }
 
 export default CoinSearch;
+export { searchedCoin };

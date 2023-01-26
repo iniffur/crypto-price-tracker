@@ -15,6 +15,7 @@ const CoinTable = () => {
       )
       .then((response) => {
         setCoins(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         alert(error.message);
@@ -48,8 +49,8 @@ const CoinTable = () => {
               name={coin.name}
               image={coin.image}
               symbol={coin.symbol}
-              price={coin.price}
-              volume={coin.volume}
+              price={coin.current_price}
+              volume={coin.total_volume}
               priceChange={coin.price_change_percentage_24h}
               marketCap={coin.market_cap}
               rank={coin.market_cap_rank}
