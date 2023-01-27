@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Crypto Price Tracker - WIP
+
+<div align="left">
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+      <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Bootstrap&color=7952B3&logo=Bootstrap&logoColor=FFFFFF&label="/>
+</div>
+<br>
+
+A frontend React project using Coin Gecko's [API](https://www.coingecko.com/en/api)
+
+<br><br><br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
