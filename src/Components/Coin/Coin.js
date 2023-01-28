@@ -1,6 +1,5 @@
 import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
-// import "./Token.css"
 
 const Coin = ({
   name,

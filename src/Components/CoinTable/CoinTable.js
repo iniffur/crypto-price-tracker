@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-// import "./CoinTable.css"
 import Coin from "../Coin/Coin";
 import { searchedCoin } from "../CoinSearch/CoinSearch";
 import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
@@ -27,10 +26,34 @@ const CoinTable = () => {
     coin.name.toLowerCase().includes(searchedCoinName.toLowerCase())
   );
 
+  if (filteredCoins.length === 0) {
+    return (
+      <>
+        <MDBTable hover align="middle">
+          <MDBTableHead className="bg-success bg-opacity-50">
+            <tr className="text-end">
+              <th scope="col" className="text-center">
+                Rank
+              </th>
+              <th scope="col" className="text-start">
+                Coin
+              </th>
+              <th scope="col">Price</th>
+              <th scope="col">24h %</th>
+              <th scope="col">Market Cap</th>
+              <th scope="col">Volume</th>
+            </tr>
+          </MDBTableHead>
+        </MDBTable>
+        <h5 className="p-2 text-center ">No results found</h5>
+      </>
+    );
+  }
+
   return (
     <>
       <MDBTable hover align="middle">
-        <MDBTableHead className="table-success">
+        <MDBTableHead className="bg-success bg-opacity-50">
           <tr className="text-end">
             <th scope="col" className="text-center">
               Rank
@@ -49,6 +72,7 @@ const CoinTable = () => {
             return (
               <Coin
                 key={coin.id}
+                rank={coin.market_cap_rank}
                 name={coin.name}
                 image={coin.image}
                 symbol={coin.symbol}
@@ -56,7 +80,6 @@ const CoinTable = () => {
                 volume={coin.total_volume}
                 priceChange={coin.price_change_percentage_24h}
                 marketCap={coin.market_cap}
-                rank={coin.market_cap_rank}
               />
             );
           })}

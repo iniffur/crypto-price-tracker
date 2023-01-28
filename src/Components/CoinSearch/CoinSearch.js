@@ -1,3 +1,4 @@
+import { MDBInput } from "mdb-react-ui-kit";
 import React, { useState, createContext } from "react";
 import CoinTable from "../CoinTable/CoinTable";
 // import "./CoinSearch.css";
@@ -13,13 +14,13 @@ function CoinSearch() {
 
   return (
     <>
-      <div className="p-5 text-center">
-        <div className="coinSearch">
-          <h1 className="coinText">Search for a specific Coin</h1>
+      <div className="p-4 text-center ">
+        <div className="d-flex justify-content-center mb-4">
+          <h3 className="coinText me-2 ">Search for a specific Coin:</h3>
           <form>
-            <input
+            <MDBInput
               type="text"
-              placeholder="Search"
+              label="Search"
               className="coinInput"
               onChange={handleChange}
             />
