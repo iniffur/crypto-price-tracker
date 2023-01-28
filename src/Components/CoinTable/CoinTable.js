@@ -29,17 +29,19 @@ const CoinTable = () => {
 
   return (
     <>
-      <MDBTable hover>
-        <MDBTableHead dark>
-          <tr>
-            <th>Coin</th>
-            <th>Name</th>
-            <th>Symbol</th>
-            <th>Price</th>
-            <th>Rank</th>
-            <th>24h %</th>
-            <th>Market Cap</th>
-            <th>Volume</th>
+      <MDBTable hover align="middle">
+        <MDBTableHead className="table-success">
+          <tr className="text-end">
+            <th scope="col" className="text-center">
+              Rank
+            </th>
+            <th scope="col" className="text-start">
+              Coin
+            </th>
+            <th scope="col">Price</th>
+            <th scope="col">24h %</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">Volume</th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
