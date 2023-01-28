@@ -24,7 +24,7 @@ const Coin = ({
         </td>
         <td data-label="Name">{name}</td>
         <td data-label="Symbol">{symbol.toUpperCase()}</td>
-        <td data-label="Price">{price}</td>
+        <td data-label="Price">${price}</td>
         <td data-label="Market Cap Rank">{rank}</td>
         {priceChange < 0 ? (
           <td data-label="Price Change Percentage" className="loss">
@@ -35,8 +35,8 @@ const Coin = ({
             +{priceChange.toFixed(2)}%
           </td>
         )}
-        <td data-label="Market Cap">{marketCap}</td>
-        <td data-label="Volume">{volume}</td>
+        <td data-label="Market Cap">${marketCap}</td>
+        <td data-label="Volume">${volume}</td>
       </tr>
     </>
   );

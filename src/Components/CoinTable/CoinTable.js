@@ -12,7 +12,7 @@ const CoinTable = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false"
       )
       .then((response) => {
         setCoins(response.data);
@@ -35,11 +35,11 @@ const CoinTable = () => {
             <th>Coin</th>
             <th>Name</th>
             <th>Symbol</th>
-            <th>Price (GBP)</th>
+            <th>Price</th>
             <th>Rank</th>
             <th>24h %</th>
-            <th>Market Cap (GBP)</th>
-            <th>Volume (GBP)</th>
+            <th>Market Cap</th>
+            <th>Volume</th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
